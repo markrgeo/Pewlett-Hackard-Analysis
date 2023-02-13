@@ -1,0 +1,43 @@
+Departments
+--
+Dept_no varchar pk fk >- Dept_Emp.Dept_no
+Dept_name  varchar
+
+Dept_Emp
+-
+Emp_no int pk fk >- Manager.Emp_no
+Dept_no varchar fk
+From_date date
+To_date date
+
+Manager
+--
+Dept_no varchar pk fk - Departments.Dept_no
+Emp_no int fk - Employees.Emp_no
+From_date date
+To_date date
+
+Titles
+-
+Emp_no int fk >- Employees.Emp_no
+Title varchar_pk
+From_date date
+To_date date
+
+Salaries
+--
+Emp_no int fk >- Employees.Emp_no
+Salary vachar_pk
+From_date date
+To_date date
+
+Employees
+-
+Emp_no int pk fk >- Dept_Emp.Emp_no
+Birth_date date
+First_name varchar
+Last_name varchar
+Gender varchar
+Hire_date date
+
+
